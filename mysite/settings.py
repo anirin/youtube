@@ -120,8 +120,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # image
-MEDIA_ROOT = os.path.join(BASE_DIR, 'youtube/media') 
-MEDIA_URL = '/youtube/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, '/media/') 
+# MEDIA_URL = '/media/'
+MEDIA_URL = '/media/' # 追加
+MEDIA_ROOT = BASE_DIR # 追加
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>動画詳細</title>
+</head>
+
+<body>
+    <div class="video">
+		<div class="thumbnail">
+				<img src="/media/{{video.thumbnail}}" alt="" />
+		</div>
+		<div class="details">
+			<div class="author">
+				<img src="/media/{{video.icon}}" alt="" />
+			</div>
+			<div class="title">
+				<h3>
+					{{video.title}}
+				</h3>
+				<a href="">
+					{{video.author}}
+				</a>
+				<span> {{video.created_at}} </span>
+			</div>
+			<div class="content">
+				{{video.content}}
+			</div>
+		</div>
+	</div>
+    <a href="{% url 'youtube:index' %}">トップページに戻る</a>
+</body>
+
+</html>

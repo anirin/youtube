@@ -30,7 +30,9 @@
 		</div>
 
 		<div class="icons right">
-			<i class="material-icons">videocam</i>
+			<a href={% url 'youtube:create' %}>
+				<i class="material-icons">videocam</i>
+			</a>
 			<i class="material-icons">apps</i>
 			<i class="material-icons">notifications</i>
 			<i class="material-icons display-this">account_circle</i>
@@ -80,11 +82,13 @@
 				<!-- a video starts -->
 				<div class="video">
 					<div class="thumbnail">
-						<img src="/youtube/media/{{video.thumbnail}}" alt="" />
+						<a href={% url 'youtube:video' video_id=video.id %}>
+							<img src="/media/{{video.thumbnail}}" alt="" />
+						</a>
 					</div>
 					<div class="details">
 						<div class="author">
-							<img src="/youtube/media/{{video.icon}}" alt="" />
+							<img src="/media/{{video.icon}}" alt="" />
 						</div>
 						<div class="title">
 							<h3>
