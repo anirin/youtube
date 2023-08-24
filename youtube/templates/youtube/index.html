@@ -82,7 +82,7 @@
 				<!-- a video starts -->
 				<div class="video">
 					<div class="thumbnail">
-						<a href={% url 'youtube:video' video_id=video.id %}>
+						<a href={% url 'youtube:detail' video_id=video.id %}>
 							<img src="/media/{{video.thumbnail}}" alt="" />
 						</a>
 					</div>
@@ -110,5 +110,4 @@
 	</main>
 	<!-- Main Body Ends -->
 </body>
-
 </html>
