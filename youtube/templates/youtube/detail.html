@@ -34,18 +34,11 @@
 	<form id="form_area" action="{% url 'youtube:detail' video_id=video.id %}" method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <button type="submit" >送信</button>
+        <button type="submit" id="submit">送信</button>
 	</form>
     <hr>
     <h2>コメント</h2>
     <div id="content_area">{% include "youtube/content.html" %}</div>
-    {% comment %} <div id="content_area">
-        {% for comment in comments %}
-        <div class="border">
-            名前：{{ comment.name }}  コメント：{{ comment.content }}<br>
-        </div>
-        {% endfor %}
-    </div> {% endcomment %}
     <a href="{% url 'youtube:index' %}">トップページに戻る</a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{% static 'youtube/ajax.js' %}"></script>
